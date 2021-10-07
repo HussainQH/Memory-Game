@@ -1,16 +1,16 @@
-import React from "react";
+import { useState } from "react";
 
 function Card(props) {
   const card = props.card;
+  const [flip, setFlip] = useState(false);
   return (
-    <div className="grid-container">
-      {" "}
-      <div>
-        <img className="memory-card" alt={card.name} src={card.back} />
-      </div>
-      <div>
-        <img className="memory-card" alt={card.name} src={card.back} />
-      </div>
+    <div>
+      <img
+        className="grid-item"
+        alt={card.name}
+        src={flip === false ? card.back : card.front}
+        onClick={() => setFlip(!flip)}
+      />
     </div>
   );
 }

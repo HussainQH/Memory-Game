@@ -37,15 +37,6 @@
   }
 }
 
-.memory-game {
-  width: 640px;
-  height: 640px;
-  margin: auto;
-  display: inline-grid;
-  flex-wrap: wrap;
-  perspective: 1000px;
-}
-
 .memory-card {
   width: calc(25% - 5px);
   height: calc(25% - 5px);
@@ -82,8 +73,31 @@
 }
 
 .grid-container {
+  display: inline-grid;
+
   grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
+  grid-template-rows: auto auto auto auto;
   background-color: #2196f3;
   padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+}
+
+.grid-container img {
+  width: 150px;
+  height: 150px;
+  transform: rotateY(180deg);
+}
+
+.button {
+  text-align: right;
+  color: #2196f3;
+  background-color: rgb(1, 10, 41);
 }
